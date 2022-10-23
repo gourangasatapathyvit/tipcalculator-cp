@@ -18,14 +18,14 @@
             <div class="title">Bill total</div>
             <div class="inputContainer">
                 <span>$</span>
-                <input onkeyup="calculateBill()" type="text" id="billTotalInput" placeholder="0.00" />
+                <input onkeyup="calculateBill()" type="number" id="billTotalInput" placeholder="0.00" />
             </div>
         </div>
         <div class="container">
             <div class="title">Tip</div>
             <div class="inputContainer">
                 <span>%</span>
-                <input onkeyup="calculateBill()" type="text" id="tipInput" placeholder="10" />
+                <input onkeyup="calculateBill()" type="number" id="tipInput" min="0" max="100"  placeholder="10" />
             </div>
         </div>
         <div class="container" id="bottom">
