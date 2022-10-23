@@ -29,23 +29,12 @@ let tipInput = document.getElementById('tipInput');
 let totalAmount = document.getElementById('perPersonTotal');
 
 
-
-// Get number of people from number of people div
-// let getNumber = document.getElementById('numberOfPeople');
-// let finalGetNumber = Number(getNumber.innerText)
-
-
 // ** Calculate the total bill per person **
 const calculateBill = () => {
     // get bill from user input & convert it into a number
-    finalcalculateBillTotalAmount = Number(calculateBillTotalAmount.value)
+    finalcalculateBillTotalAmount = Number(calculateBillTotalAmount.value);
 
     finaltipInput = Number(tipInput.value);
-
-
-
-    // console.log(finalcalculateBillTotalAmount, finaltipInput, totalAmount.innerText)
-
 
     // get the tip from user & convert it into a percentage (divide by 100)
     tipAmount = calculateBillTotalAmount.value * (tipInput.value * 0.01);
@@ -56,7 +45,6 @@ const calculateBill = () => {
     // update the perPersonTotal on DOM & show it to user
     // calculate the per person total (total divided by number of people)
     totalAmount.innerText = "$ " + (finalAmount).toFixed(2);
-
 
 }
 
@@ -88,7 +76,7 @@ const decreasePeople = () => {
     
     // decrement the amount of people
     let getNumberOfPeople = finalGetNumber
-    if (getNumberOfPeople > 1) {
+    if (getNumberOfPeople > 0) {
         getNumberOfPeople -= 1;
     }
     else {
